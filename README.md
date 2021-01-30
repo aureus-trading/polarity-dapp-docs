@@ -19,9 +19,15 @@ Polarity UI is able to dynamically generate the UI for a DApp based on a data-en
                 }
             ],
             "optionalInputs": [
-            ]
+            ],
+            "showResult": true
         }
-    ]
+    ],
+    "visibleDataFields": {
+      "fieldName: { 
+        "transform": ""
+      }
+    }
 }
 ```
 
@@ -36,6 +42,7 @@ Polarity UI is able to dynamically generate the UI for a DApp based on a data-en
 |Version|The version of the DApp intepreter to use (Default to 1)|
 |Featured Image|The base64 encoded image which should include data:image/png;base64,\<encoded image\>. Featured images should be a maximum of 20KB as network data tx can have a maximum of 32,767 bytes value. https://docs.waves.tech/en/blockchain/transaction-type/data-transaction#json-representation|
 |Functions|Field defining the UI behavior|
+|visibleDataFields|Map of visible datafields to show as apart of the DApp UI|
 
 ## Accepted Subfields
 
@@ -45,6 +52,7 @@ Polarity UI is able to dynamically generate the UI for a DApp based on a data-en
 |name|The name of the function to invoke i.e. swap|
 |requiredInput|The required inputs to allow users to specify as apart of the UI, refer to subfield Inputs|
 |optionalInputs|The optional inputs to allow users to specify as apart of the UI, refer to subfield Inputs|
+|showResult|Whether or not to show the script result when run|
 
 
 ### Inputs (requiredInput | optionalInputs)

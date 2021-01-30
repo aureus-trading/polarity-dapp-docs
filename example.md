@@ -18,9 +18,12 @@
                 }
             ],
             "optionalInputs": [
-            ]
+            ],
+            "showResult": true
         }
-    ]
+    ],
+    "visibleDataFields": {
+    }
 }
 ```
 
