@@ -15,7 +15,8 @@ Polarity UI is able to dynamically generate the UI for a DApp based on a data-en
             "requiredInputs": [
                 {
                     "type":"payment",
-                    "assetId": ""
+                    "assetId": "",
+                    "fixedAmount":""
                 }
             ],
             "optionalInputs": [
@@ -61,3 +62,9 @@ Polarity UI is able to dynamically generate the UI for a DApp based on a data-en
 |description|The description to display to the user|
 |type|The type of input that will be passed, as of version 1.0 [payment](https://docs.waves.tech/en/blockchain/transaction-type/invoke-script-transaction#json-representation) is supported|
 |assetId|The asset id to filter the selectable assets on|
+|FixedAmount| This amount of the asset is required|
+
+
+### Return
+
+The State change will show to users however if you want to show users a direct message you can include in your return a field with key "message"
