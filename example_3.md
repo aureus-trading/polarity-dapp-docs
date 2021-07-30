@@ -31,11 +31,6 @@
     {
       "name": "optionalExample",
       "requiredInputs": [
-        {
-          "description": "",
-          "type": "payment",
-          "assetId": "5ih9jd4KV9kSey55yvKMgLSHcwsYYkQ4pRDJtRNoxUhy"
-        }
       ],
       "optionalInputs": [
         {
