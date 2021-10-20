@@ -2,7 +2,7 @@
 
 Polarity UI is able to dynamically generate the UI for a DApp based on a data-entry against a DApp with the name 'pspec'. The functionality serves to allow for interaction with DApps and lower the barrier of entry for participant in the ecosystem.
 
-## Specifications v1.0
+## Specifications v2.0
 ```
 {
     "name": "",
@@ -17,9 +17,26 @@ Polarity UI is able to dynamically generate the UI for a DApp based on a data-en
                     "type":"payment",
                     "assetId": "",
                     "fixedAmount":""
+                },
+                {
+                    "type": "paymentRange",
+                    "assetId": "", (optional)
+                    "minPayments": 2,
+                    "maxPayments": 4
                 }
             ],
             "optionalInputs": [
+                {
+                    "type": "payment",
+                    "assetId": "",
+                    "fixedAmount": ""
+                },
+                {
+                    "type": "paymentRange",
+                    "assetId": "", (optional)
+                    "minPayments": 1,
+                    "maxPayments": 5
+                }
             ],
             "showResult": true
         }
@@ -60,9 +77,11 @@ Polarity UI is able to dynamically generate the UI for a DApp based on a data-en
 |Name|Description|
 |-|-|
 |description|The description to display to the user|
-|type|The type of input that will be passed, as of version 1.0 [payment](https://docs.waves.tech/en/blockchain/transaction-type/invoke-script-transaction#json-representation) is supported|
-|assetId|The asset id to filter the selectable assets on|
-|FixedAmount| This amount of the asset is required|
+|type|The type of input that will be passed, as of version 2.0 [payment and paymentRange](https://docs.waves.tech/en/ride/v4/structures/common-structures/invocation) are supported|
+|assetId|The asset id to filter the selectable assets on, optional in paymentRange, if not present will enable user to pick a single asset for all payments in that range|
+|fixedAmount| This amount of the asset is required|
+|minPayments| The minimum number of different payments in that range|
+|maxPayments| The maximum number of different payments in that range|
 
 
 ### Return
